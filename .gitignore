@@ -1,0 +1,6 @@
+.DS_Store
+.fontcustom-manifest.json
+.Gemfile.lock
+.ruby-version
+/build
+/node_modules
