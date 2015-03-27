@@ -28,7 +28,7 @@ activate :imageoptim do |options|
 
   options.advpng    = { :level => 4 }
   options.gifsicle  = { :interlace => false }
-  options.jpegoptim = { :strip => ['all'], :max_quality => 75 }
+  options.jpegoptim = { :strip => ['all'], :max_quality => 100 }
   options.jpegtran  = { :copy_chunks => false, :progressive => true, :jpegrescan => true }
   options.optipng   = { :level => 6, :interlace => false }
   options.pngcrush  = { :chunks => ['alla'], :fix => false, :brute => false }
