@@ -80,15 +80,15 @@ page "/404.html", directory_index: false
 
 # ----- Output ----- #
 
-set :haml, {ugly: true, attr_wrapper: '"'}
-activate :minify_html do |html|
-  html.remove_quotes = false
-end
+set :haml, {attr_wrapper: '"'}
 
 # ----- Optimization ----- #
 
 configure :build do
   activate :minify_css
+  activate :minify_html do |html|
+    html.remove_quotes = false
+  end
   activate :minify_javascript
   activate :relative_assets
   activate :gzip
