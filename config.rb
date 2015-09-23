@@ -2,10 +2,6 @@
 #   Config
 # --------------------------------------
 
-# ----- Livereload ----- #
-
-activate :livereload
-
 # ----- Site ----- #
 
 set :site_url, 'http://SITEURL'
@@ -19,23 +15,23 @@ set :fonts_dir, 'assets/fonts'
 
 # ----- Images ----- #
 
-activate :automatic_image_sizes
-
-activate :imageoptim do |options|
-  options.verbose = true
-
-  options.image_extensions = %w(.png .jpg .gif .svg)
-
-  options.advpng    = { :level => 4 }
-  options.gifsicle  = { :interlace => false }
-  options.jpegoptim = { :strip => ['all'], :max_quality => 100 }
-  options.jpegtran  = { :copy_chunks => false, :progressive => true, :jpegrescan => true }
-  options.optipng   = { :level => 6, :interlace => false }
-  options.pngcrush  = { :chunks => ['alla'], :fix => false, :brute => false }
-  options.pngout    = { :copy_chunks => false, :strategy => 0 }
-  options.svgo      = {}
-
-end
+# activate :automatic_image_sizes
+#
+# activate :imageoptim do |options|
+#   options.verbose = true
+#
+#   options.image_extensions = %w(.png .jpg .gif .svg)
+#
+#   options.advpng    = { :level => 4 }
+#   options.gifsicle  = { :interlace => false }
+#   options.jpegoptim = { :strip => ['all'], :max_quality => 50 }
+#   options.jpegtran  = { :copy_chunks => false, :progressive => true, :jpegrescan => true }
+#   options.optipng   = { :level => 6, :interlace => false }
+#   options.pngcrush  = { :chunks => ['alla'], :fix => false, :brute => false }
+#   options.pngout    = { :copy_chunks => false, :strategy => 0 }
+#   options.svgo      = {}
+#
+# end
 
 # --------------------------------------
 #   Helpers
@@ -81,6 +77,10 @@ page "/404.html", directory_index: false
 # ----- Output ----- #
 
 set :haml, {attr_wrapper: '"'}
+activate :minify_html do |html|
+  html.remove_quotes = false
+  html.remove_intertag_spaces = true
+end
 
 # ----- Optimization ----- #
 
@@ -88,6 +88,7 @@ configure :build do
   activate :minify_css
   activate :minify_html do |html|
     html.remove_quotes = false
+    html.remove_intertag_spaces = true
   end
   activate :minify_javascript
   activate :relative_assets
