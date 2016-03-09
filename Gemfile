@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
-gem 'middleman', '>= 4.0.0'
-
-gem 'middleman-autoprefixer'
+gem "middleman", "~> 3.4"
+gem "middleman-autoprefixer"
+gem "middleman-deploy", "~> 0.2"
+gem "middleman-imageoptim"
 gem "middleman-minify-html"
-gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
-gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
