@@ -44,8 +44,7 @@ set :fonts_dir, 'assets/fonts'
 # ----- Directories ----- #
 
 activate :directory_indexes
-page "/404.html", directory_index: false
-
+page '/404.html', directory_index: false
 
 # --------------------------------------
 #   Development
@@ -82,12 +81,3 @@ end
 # --------------------------------------
 #   Production
 # --------------------------------------
-
-activate :deploy do |deploy|
-  deploy.method = :git # gh-pages
-  # Optional Settings
-  # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
-  # deploy.branch   = 'custom-branch' # default: gh-pages
-  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
-  # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
-end

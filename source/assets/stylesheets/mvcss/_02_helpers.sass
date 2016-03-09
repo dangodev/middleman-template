@@ -1,0 +1,67 @@
+// *************************************
+//
+//   Helpers
+//   -> Functions, Mixins, Extends, Animations
+//
+// *************************************
+
+// -------------------------------------
+//   Functions
+// -------------------------------------
+
+=z-index($key, $sum: 0)
+  z-index: 10 * index($s-layers, $key) + $sum
+
+// -------------------------------------
+//   Mixins
+// -------------------------------------
+
+// ----- Respond-to ----- //
+// -> Generates a media query
+//
+// $val - the breakpoint size
+// $query - the type of query ('min-width', 'max-width')
+// $media - the media type ('screen', 'print', etc.)
+// @content - the generated content within the mixin
+
+=respond-to($val, $query: min-width, $media: screen)
+  @media #{$media} and ($query: $val)
+    @content
+
+// -------------------------------------
+//   Extends
+// -------------------------------------
+
+// ----- Clearfix ----- //
+
+.group::after
+  clear: both
+  content: ''
+  display: table
+
+// ----- Debug ----- //
+
+.debug
+  background-color: pink !important
+
+// ----- Ellipsis ----- //
+
+.ellipsis
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+// ----- Stretch ----- //
+
+.stretch
+  bottom: 0
+  left: 0
+  position: absolute
+  right: 0
+  top: 0
+
+// -------------------------------------
+//   Animations
+// -------------------------------------
+
+// ...

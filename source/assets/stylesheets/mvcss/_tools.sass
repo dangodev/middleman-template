@@ -1,0 +1,139 @@
+// *************************************
+//
+//   Tools
+//   -> Global utilities
+//
+// *************************************
+
+// -------------------------------------
+//   Colors
+// -------------------------------------
+
+// -------------------------------------
+//   Display
+// -------------------------------------
+
+.db
+  display: block
+.di
+  display: inline
+.dib
+  display: inline-block
+
+// -------------------------------------
+//   Margin
+// -------------------------------------
+
+@each $margin in $b-margins
+  .ma#{nth($margin, 1)}
+    margin: #{nth($margin, 2)}
+  .mb#{nth($margin, 1)}
+    margin-bottom: #{nth($margin, 2)}
+  .ml#{nth($margin, 1)}
+    margin-left: #{nth($margin, 2)}
+  .mr#{nth($margin, 1)}
+    margin-right: #{nth($margin, 2)}
+  .mt#{nth($margin, 1)}
+    margin-top: #{nth($margin, 2)}
+
+// ----- Center ----- //
+
+.mhc
+  margin-left: auto
+  margin-right: auto
+
+// -------------------------------------
+//   Padding
+// -------------------------------------
+
+@each $padding in $b-margins
+  .pa#{nth($padding, 1)}
+    padding: #{nth($padding, 2)}
+  .pb#{nth($padding, 1)}
+    padding-bottom: #{nth($padding, 2)}
+  .pl#{nth($padding, 1)}
+    padding-left: #{nth($padding, 2)}
+  .pr#{nth($padding, 1)}
+    padding-right: #{nth($padding, 2)}
+  .pt#{nth($padding, 1)}
+    padding-top: #{nth($padding, 2)}
+
+// -------------------------------------
+//   Positioning
+// -------------------------------------
+
+.fl
+  float: left
+.fr
+  float: right
+
+.por
+  position: relative
+
+// -------------------------------------
+//   Text
+// -------------------------------------
+
+// ----- Alignment ----- //
+
+.tal
+  text-align: left
+.tac
+  text-align: center
+.tar
+  text-align: right
+
+// ----- Decoration ----- //
+
+.tdu
+  text-decoration: underline
+
+// ----- Leading ----- //
+
+.ld1
+  line-height: 1
+.ld15
+  line-height: 1.5
+.ld2
+  line-height: 2
+.ld25
+  line-height: 2.5
+
+// ----- Tracking ----- //
+
+.tr0
+  letter-spacing: 0
+.tr1
+  letter-spacing: 0.0625em
+.tr2
+  letter-spacing: 0.125em
+.tr3
+  letter-spacing: 0.1875em
+.tr4
+  letter-spacing: 0.25em
+
+// ----- Transform ----- //
+
+.ttu
+  text-transform: uppercase
+
+// ----- Weight ----- //
+
+.tw4
+  font-weight: 400
+.tw5
+  font-weight: 500
+.tw7
+  font-weight: 700
+
+// ----- Wrap ----- //
+
+.nw
+  white-space: nowrap
+
+// -------------------------------------
+//   Lists
+// -------------------------------------
+
+.nl
+  list-style: none

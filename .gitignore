@@ -1,6 +1,8 @@
 .DS_Store
-.fontcustom-manifest.json
 .ruby-version
-Gemfile.lock
+/.bundle
+/.cache
+/.sass-cache
 /build
 /node_modules
+Gemfile.lock
